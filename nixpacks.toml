@@ -1,0 +1,8 @@
+[build]
+libs = [
+    "nodejs"
+]
+
+[start]
+cmd = "npm start"
+

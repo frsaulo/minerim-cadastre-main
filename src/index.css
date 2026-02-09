@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Design System - MINERINDABAND
+   Paleta com laranja vibrante #ff8912 como cor principal
+*/
+
+@layer base {
+  :root {
+    --background: 30 50% 99%;
+    --foreground: 25 45% 15%;
+
+    --card: 30 40% 97%;
+    --card-foreground: 25 45% 15%;
+
+    --popover: 30 50% 99%;
+    --popover-foreground: 25 45% 15%;
+
+    /* Laranja #ff8912 convertido para HSL: 32 100% 54% */
+    --primary: 32 100% 54%;
+    --primary-foreground: 25 60% 12%;
+
+    --secondary: 35 40% 92%;
+    --secondary-foreground: 25 45% 15%;
+
+    --muted: 35 30% 94%;
+    --muted-foreground: 25 20% 45%;
+
+    --accent: 32 100% 54%;
+    --accent-foreground: 25 60% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 30% 85%;
+    --input: 30 30% 85%;
+    --ring: 32 100% 54%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --warm-cream: 35 45% 95%;
+    --warm-brown: 25 50% 25%;
+    --golden: 32 100% 54%;
+    --golden-light: 32 100% 65%;
+    --terracotta: 18 55% 45%;
+    --orange-dark: 28 100% 45%;
+
+    --gradient-hero: linear-gradient(180deg, hsla(0, 0%, 0%, 0.3) 0%, hsla(0, 0%, 0%, 0.4) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(35, 45%, 95%) 0%, hsl(30, 50%, 99%) 100%);
+    --gradient-golden: linear-gradient(135deg, hsl(32, 100%, 54%) 0%, hsl(28, 100%, 45%) 100%);
+
+    --shadow-warm: 0 4px 20px -4px hsla(32, 100%, 30%, 0.15);
+    --shadow-card: 0 8px 32px -8px hsla(32, 100%, 30%, 0.12);
+    --shadow-elevated: 0 16px 48px -12px hsla(32, 100%, 30%, 0.2);
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 30% 8%;
+    --foreground: 35 30% 92%;
+    --card: 25 25% 12%;
+    --card-foreground: 35 30% 92%;
+    --popover: 25 25% 12%;
+    --popover-foreground: 35 30% 92%;
+    --primary: 32 100% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 35 30% 92%;
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 20% 60%;
+    --accent: 32 100% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 25 20% 22%;
+    --input: 25 20% 22%;
+    --ring: 32 100% 54%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-warm-cream {
+    background-color: hsl(var(--warm-cream));
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .bg-gradient-golden {
+    background: var(--gradient-golden);
+  }
+
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .text-golden {
+    color: hsl(var(--golden));
+  }
+
+  .border-golden {
+    border-color: hsl(var(--golden));
+  }
+}
+# lovable-badge {
+	display: none !important;
+}
