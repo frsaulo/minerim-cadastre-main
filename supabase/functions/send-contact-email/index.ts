@@ -44,7 +44,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to the company
     const emailResponse = await resend.emails.send({
-      from: "MinerindaBand <onboarding@resend.dev>",
+      from: "MinerindaBand <contato@minerindaband.com.br>",
       to: ["contato@minerindaband.com.br"],
       subject: `Novo Cadastro de Representante - ${formData.name}`,
       html: `
